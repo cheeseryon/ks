@@ -65,7 +65,8 @@ header .util .searchBtn{width:22px; height:22px; background:url(../img/search.pn
 
 .mainVisul{position:relative; top:0; left:0; width:100vw; height:auto;}
 .mainVisul:after{position:absolute; top:0; left:0; content:''; display:block; width:70vw; height:100%; background:#eeebe4; z-index:-1;}
-.mainVisul .titleArea .titleWrap{position:absolute; width:360px; height:100%; z-index:10;}
+.mainVisul .titleArea {transition: all 1s}
+.mainVisul .titleArea .titleWrap{position:absolute; width:360px; height:100%; z-index:10; transition:all 0.5s}
 .mainVisul .titleArea .tiltePositionBox{position:relative; top:50%; left:0; transform:translateY(-50%); height:40%;}
 .mainVisul .titleArea #pagination01{width:100%; margin-bottom:2.5em;}
 .mainVisul .titleArea #pagination01 > span{display:inline-block; padding:0 .325em;}
