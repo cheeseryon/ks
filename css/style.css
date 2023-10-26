@@ -21,6 +21,8 @@ body{min-width:413px; color:#333; font:1.6rem 'Noto Sans KR',sans-serif;}
 .langSite a{padding:0 .625em; color:#999;}
 .langSite a.tabOn{position:relative; color:#333;}
 .langSite a.tabOn:after{position:absolute; top:30%; right:-4px; content:''; display:block; width:1px; height:10px; background:#999;}
+.likeBtn{width:26px; height:26px; background:url(../img/like.png) no-repeat center/cover;}
+
 header{height:100px;}
 header .headWrap{position:fixed; width:100%; height:100px; background:#fff; z-index:30; transition:all .3s;}
 header .headWrap:after{position:absolute; top:0; left:0; content:''; display:block; width:70vw; height:100%; background:#eeebe4; z-index:-1;}
@@ -44,9 +46,10 @@ header nav .gnb .gnbList .subMenu > li:hover a{color:#602a19;}
 
 header .util{display:flex; justify-content:space-between; align-items:center; width:240px; height:100%;}
 header .util span,header .util span a{display:block;}
+header .util .likeBtn{width:26px; height:26px; background:url(../img/like.png) no-repeat center/cover;}
 header .util .likeBtn > a{position:relative; display:inline-block; width:30px; height:100%; font-size:2.8rem;}
-header .util .likeBtn > a:before{position:absolute; top:0; right:-6px; content:''; display:block; width:20px; height:20px; border-radius:50%; background:#ff2e2e;}
-header .util .likeBtn >a:after{position:absolute; top:0; right:0; content:'5'; text-align:center; font-size:1.4rem; color:#333;}
+header .util .likeBtn > a:before{position:absolute; top:-5px; right:-6px; content:''; display:block; width:20px; height:20px; border-radius:50%; background:#ff2e2e;}
+header .util .likeBtn >a:after{position:absolute; top:-5px; right:0; content:'5'; text-align:center; font-size:1.4rem; color:#333;}
 header .util input{width:160px; height:50px; line-height:50px; padding:0; border:none; border-bottom:1px solid #d1d1d1; outline:none; font-size:1.3rem; color:#666;}
 header .util .searchBtn{width:22px; height:22px; background:url(../img/search.png) no-repeat center/cover;}
 /* //header */
@@ -160,7 +163,7 @@ h2.title{position:relative; height:70px; text-align:center; color:#111; font-siz
     letter-spacing:0; font-variant:initial; line-height:1;
 }
 /* collection swiper END*/
-.collection .prodListWrap .textArea {position:relative; display:flex; flex-direction:column; width:50%; height: 100%; max-height:680px; padding-left:3.75em; animation: textAreaMove 1s;}
+.collection .prodListWrap .textArea {position:relative; display:flex; flex-direction:column; width:50%; height: 100%; max-height:680px; padding-left:3.75em;}
 .collection .prodListWrap.on .textArea {animation: textAreaMove 1s;}
 @keyframes textAreaMove {
     0% {opacity: 0; transform: translateX(50px);}
