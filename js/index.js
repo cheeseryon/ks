@@ -1,4 +1,4 @@
-/* header event  */
+/* Header hover&&scroll 이벤트  */
 let gnb = document.querySelector('.gnbArea > .gnb');
 let gnbBg = document.querySelector('.gnbBg');
 let headWrap = document.querySelector('.headWrap')
@@ -16,45 +16,37 @@ window.addEventListener('scroll', function(){
     0 < scrollY ? headWrap.classList.add("headWrapScroll") : headWrap.classList.remove("headWrapScroll");
 })
 
-/* click event  */
+/* top 이동 버튼  */
 let badge = document.querySelector('.badge')
 badge.addEventListener('click' , function (){
     window.scrollTo({top : 0 , behavior : "smooth"});
 })  
 
 /* mainVisual slide */
-     /* 왼쪽 pagination */
-     let pagiNum =document.querySelectorAll(".pagiNum"); // 왼쪽 pagination 순서
-     let pagiBar =document.querySelector(".pagiBar");    // pagiNum에 클래스를 추가하여 만들 진행 % 막대
-     let toggleBtn =document.querySelector("#toggleBtn"); /* 재생,정지 버튼 */
-         /* titleArea 요소들 */
-     let titleWrap = document.querySelector(".titleWrap"); // 슬라이드 resize 크기에 맞춰 titleArea도 수정이 필요
-     let titleArea = document.querySelector(".titleArea"); // 680이하 일 때 높이값을 slideImg와 층 구조 형성을 위해 tilteItem에 맞춰야 함
-     let tilteItem =document.querySelectorAll(".tilteItem"); // fadeIn 효과를 위해 필요
-     let fadeInTitle =document.querySelector(".fadeInTitle"); // titleArea 높이값 조절을 위해 필요
-         /* slide 요소들 */
-     let slideImgArea = document.querySelector(".slideImgArea");
-     let slideContainor = document.querySelector(".slideContainor");
-     let slideList = document.querySelectorAll(".slideList");
-         /* 이전 다음 버튼 */
-     let slidePrevBtn = document.querySelector(".slidePrevBtn");
-     let slideNextBtn = document.querySelector(".slideNextBtn");
-         /* 오른쪽 pagination */
-     let curNumContainor = document.querySelector(".curNumContainor");
-     let curNum = document.querySelectorAll(".curNum");
-         /* 슬라이드 자동넘김을 위해 필요 */
-     let slideInterval;
-         /* 공용 */
-     let currentIndex = 0;
-         /* if문(matchMedia) 에 사용할 undefind 변수 */
-     let sldieWidth ;
-     let sldieHeight ;
-     let titleWrapHeight ; //디바이스 크기 681~1200 일때 사진 비율에 위치 조절이 필요
-     let titleAreaHeight ; // 디바이스 크기 680이하 일때는 타이틀 영역이 위로 올라가기에 height 값 조절이 필요
+    /* 왼쪽 pagination */
+    let pagiNum =document.querySelectorAll(".pagiNum"); // 왼쪽 pagination 순서
+    let pagiBar =document.querySelector(".pagiBar");    // pagiNum에 클래스를 추가하여 만들 진행 % 막대
+    let toggleBtn =document.querySelector("#toggleBtn"); /* 재생,정지 버튼 */
+    let titleWrap = document.querySelector(".titleWrap"); // 슬라이드 resize 크기에 맞춰 titleArea도 수정이 필요
+    let titleArea = document.querySelector(".titleArea"); // 680이하 일 때 높이값을 slideImg와 층 구조 형성을 위해 tilteItem에 맞춰야 함
+    let tilteItem =document.querySelectorAll(".tilteItem"); // fadeIn 효과를 위해 필요
+    let fadeInTitle =document.querySelector(".fadeInTitle"); // titleArea 높이값 조절을 위해 필요
+    let slideImgArea = document.querySelector(".slideImgArea");
+    let slideContainor = document.querySelector(".slideContainor");
+    let slideList = document.querySelectorAll(".slideList");
+    let slidePrevBtn = document.querySelector(".slidePrevBtn");
+    let slideNextBtn = document.querySelector(".slideNextBtn");
+    let curNumContainor = document.querySelector(".curNumContainor");
+    let curNum = document.querySelectorAll(".curNum");
 
-     /* let titleHeight; */
+    let sldieWidth ;
+    let sldieHeight ;
+    let titleWrapHeight ; //디바이스 크기 681~1200 일때 사진 비율에 위치 조절이 필요
+    let titleAreaHeight ; // 디바이스 크기 680이하 일때는 타이틀 영역이 위로 올라가기에 height 값 조절이 필요
+    let slideInterval;
+    let currentIndex = 0;
 
-function resize () { // 브라우저의 넓이(window.inner)가 변할 때 슬라이드의 width,height값만 자동으로 조정하기 위해 width,height부분만 resize 함수로 지정
+function resize () { // 브라우저의 넓이(window.inner)가 변할 때 슬라이드의 width,height값을 조정하기 위한 함수
     if (window.matchMedia("(min-width:1240px)").matches) { /* 사진 비율 4:3 */
         sldieWidth = 1200;
         sldieHeight = 800;
@@ -147,9 +139,7 @@ toggleBtn.addEventListener('click' , function(){
         this.classList.remove('on')
     }
     clickCount++;
-    console.log(clickCount)
 });
-
 
 /* collection > containor 높이 */
 let collection = document.querySelector('.collection')
@@ -165,9 +155,8 @@ function collectionHeightCalc() {
 collectionHeightCalc()
 
 
-/* collection > swiper 높이 */
+/* collection > swiper 높이값을 width값에 맞춰 수정 */
 let slide = document.querySelectorAll('.swiper-slide')
-let swiper  = document.querySelectorAll('.swiper-wrapper')
 let slideImg = document.querySelectorAll('.swiper-slide > img')
 
 function slideHeightCalc() {
@@ -181,28 +170,7 @@ slideHeightCalc()
 let brTit = document.querySelectorAll('.brTit')         
 let cateName = document.querySelectorAll('.cateName')
 
-
-for(let i = 0; i < cateName.length; i++) {             
-    cateName[i].addEventListener('click' , function(e){
-        
-        for (let j = 0; j < cateName.length; j++) {  
-            cateName[j].classList.remove('on')
-            prodList[j].classList.remove('on');            
-        }
-        cateName[i].classList.add('on')
-        prodList[i].classList.add('on')
-
-        for(let k = 0; k < brTit.length; k++) {  
-            brTit[k].classList.remove('on')
-        }
-        let brTitOn = e.target.parentNode.parentNode.previousElementSibling
-        brTitOn.classList.add('on')
-        slideHeightCalc()
-        collectionHeightCalc()
-    })
-    
-}
-
+/* 큰 탭메뉴(2개짜리) */
 for(let i = 0; i < brTit.length; i++) {   
     brTit[i].addEventListener('click' , function(e){
         for (let j = 0; j < cateName.length; j++) {  
@@ -219,10 +187,24 @@ for(let i = 0; i < brTit.length; i++) {
             brTit[k].classList.remove('on')
         }
         e.target.classList.add('on')
-        slideHeightCalc()
-        collectionHeightCalc()
     })
-    
+}
+/* 작은 탭메뉴(5개짜리) */
+for(let i = 0; i < cateName.length; i++) {             
+    cateName[i].addEventListener('click' , function(e){
+        for (let j = 0; j < cateName.length; j++) {  
+            cateName[j].classList.remove('on')
+            prodList[j].classList.remove('on');            
+        }
+        cateName[i].classList.add('on')
+        prodList[i].classList.add('on')
+
+        for(let k = 0; k < brTit.length; k++) {  
+            brTit[k].classList.remove('on')
+        }
+        let brTitOn = e.target.parentNode.parentNode.previousElementSibling
+        brTitOn.classList.add('on')
+    })
 }
 
 /* scrollFadeIn 이벤트 */
@@ -241,14 +223,12 @@ function scrollFadeIn(){
             fadeInClass[i].classList.add('on')
         }
     }
-
+    /* 모든 요소에 on클래스가 붙으면 함수 종료 */
     if(fadeInClass.every(item => item.classList.contains('on'))) {
         return
     }
 }
-window.addEventListener('scroll' , function(){
-    scrollFadeIn()
-})
+
 
 /* 모바일 gnb */
 let mobileOpen = document.querySelector('.fullDownBtn')
@@ -276,7 +256,7 @@ secondList.addEventListener('click', function(e) {
     e.preventDefault();
     alert('준비중입니다')
 })
-
+/* 첫번째 아코디언 */
 for(let i = 0; i < depth01Btn.length; i++) {
     depth01Btn[i].addEventListener('click', function(e) {
         e.preventDefault();
@@ -296,6 +276,7 @@ for(let i = 0; i < depth01Btn.length; i++) {
     });
 }
 
+/* 두번째 아코디언 */
 let depth02Btn = Array.from(document.querySelectorAll('.depth02Btn'))
 let depth02All = document.querySelectorAll('.depth02')
 
@@ -324,7 +305,6 @@ for(let i = 0; i < depth02Btn.length; i++) {
     });
 }
 
-
 window.addEventListener('load', function() {
     resize()
     clearInterval(slideInterval);
@@ -338,7 +318,9 @@ window.addEventListener('resize', function() {
     resize()
     }
 )
-
+window.addEventListener('scroll' , function(){
+    scrollFadeIn()
+})
 
 
 
