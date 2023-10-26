@@ -60,7 +60,7 @@ function resize () { // 브라우저의 넓이(window.inner)가 변할 때 슬�
     } else if (window.matchMedia("(max-width:770px)").matches) { /* 사진 비율 5:4 */
         sldieWidth = window.innerWidth;
         sldieHeight = sldieWidth * 0.8;    
-
+        titleWrapHeight = null
         for(let i=0; i < tilteItem.length; i++) {            // 서로 다른 tilteItem 높이에 맞춰 titleAreaHeight의 높이값을 변경 
             if(tilteItem[i].classList.contains('fadeInTitle')) {
                 titleAreaHeight=tilteItem[i].clientHeight
@@ -161,7 +161,7 @@ let slideImg = document.querySelectorAll('.swiper-slide > img')
 
 function slideHeightCalc() {
     for(let i = 0; i < slideImg.length; i++) {
-        slide[i].style.height = slide[i].clientWidth * 1 + 'px'
+        slide[i].style.height = slideImg[i].clientWidth * 1 + 'px'
     }
 }
 slideHeightCalc()
@@ -187,6 +187,8 @@ for(let i = 0; i < brTit.length; i++) {
             brTit[k].classList.remove('on')
         }
         e.target.classList.add('on')
+
+        slideHeightCalc()
     })
 }
 /* 작은 탭메뉴(5개짜리) */
@@ -204,6 +206,8 @@ for(let i = 0; i < cateName.length; i++) {
         }
         let brTitOn = e.target.parentNode.parentNode.previousElementSibling
         brTitOn.classList.add('on')
+
+        slideHeightCalc()
     })
 }
 

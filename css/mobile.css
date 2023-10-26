@@ -1,9 +1,6 @@
 @charset "utf-8"; 
 @import url(font.css); 
 
-/* .swiper {height:auto;}
-.collection .containor {padding-bottom:0; height:auto;} */
-
 @media screen and (min-width:1241px) and (max-width:1400px)  {
 header nav .gnb .gnbList > a {font-size:1.6rem; padding:0 1.25em;}
 }
@@ -71,11 +68,12 @@ header .util .searchBtn {width:24px; height:24px;}
 .mobileGnb .firstList .leftWarp {display:flex; justify-content:space-between; width:350px; height:100%; padding:0 .625em;}
 .mobileGnb .firstList .btnWrap {width:150px;}
 .mobileGnb .firstList .btnWrap > span {float:left; height:100%;}
+.mobileGnb .firstList .btnWrap > span.likeBtn {position: relative; top: 18px; width:24px; height:24px;}
 .mobileGnb .firstList .langSite {width:110px; font-size:1.6rem;}
 .mobileGnb .firstList .langSite .tabOn:after {position:absolute; top:6px; right:-1px;}
 .mobileGnb .firstList .likeBtn > a {position:relative; display:inline-block; width:30px; height:100%; font-size:28px;}
-.mobileGnb .firstList .likeBtn > a:before {position:absolute; top:10px; right:-6px; content:''; display:block; width:20px; height:20px; border-radius:50%; background:rgb(255,46,46);}
-.mobileGnb .firstList .likeBtn > a:after {position:absolute; top:-10px; right:0; content:'5'; text-align:center; font-size:1.4rem; color:#333;}
+.mobileGnb .firstList .likeBtn > a:before {position:absolute; top:-17px; right:-5px; content:''; display:block; width:18px; height:18px; border-radius:50%; background:rgb(255,46,46);}
+.mobileGnb .firstList .likeBtn > a:after {position:absolute; top:-38px; right:0; content:'5'; text-align:center; font-size:1.4rem; color:#333;}
 .mobileGnb .firstList .closeBtn {position:absolute; top:6px; right:12px; width:28px; height:28px; z-index:110;}
 .mobileGnb .firstList .closeBtn a {display:inline-block; width:100%; height:100%; background:url(../img/close.png) no-repeat center/cover;}
 .mobileGnb .gnbList {float:none;}
@@ -157,11 +155,12 @@ header .headWrap:after {width:100vw;}
 .mobileGnb .firstList .leftWarp {display:flex; justify-content:space-between; width:350px; height:100%; padding:0 .625em;}
 .mobileGnb .firstList .btnWrap {width:150px;}
 .mobileGnb .firstList .btnWrap > span {float:left; height:100%;}
-.mobileGnb .firstList .langSite {margin-right:10px; font-size:1.4rem;}
-.mobileGnb .firstList .langSite .tabOn:after {position:absolute; top:5px; right:-1px;}
-.mobileGnb .firstList .likeBtn > a {position:relative; display:inline-block; width:30px; height:100%;}
-.mobileGnb .firstList .likeBtn > a:before {position:absolute; top:11px; right:1px; content:''; display:block; width:18px; height:18px; border-radius:50%; background:rgb(255,46,46);}
-.mobileGnb .firstList .likeBtn > a:after {position:absolute; top:-10px; right:6px; content:'5'; text-align:center; font-size:1.4rem; color:#333;}
+.mobileGnb .firstList .btnWrap > span.likeBtn {position: relative; top: 14px; width:24px; height:24px;}
+.mobileGnb .firstList .langSite {width:110px; font-size:1.6rem;}
+.mobileGnb .firstList .langSite .tabOn:after {position:absolute; top:6px; right:-1px;}
+.mobileGnb .firstList .likeBtn > a {position:relative; display:inline-block; width:30px; height:100%; font-size:28px;}
+.mobileGnb .firstList .likeBtn > a:before {position:absolute; top:-19px; right:-4px; content:''; display:block; width:18px; height:18px; border-radius:50%; background:rgb(255,46,46);}
+.mobileGnb .firstList .likeBtn > a:after {position:absolute; top:-38px; right:0; content:'5'; text-align:center; font-size:1.4rem; color:#333;}
 .mobileGnb .firstList .closeBtn {position:absolute; top:6px; right:12px; width:28px; height:28px; z-index:110;}
 .mobileGnb .firstList .closeBtn a {display:inline-block; width:100%; height:100%; background:url(../img/close.png) no-repeat center/cover;}
 .mobileGnb .gnbList {float:none; overflow:hidden;}
@@ -188,8 +187,8 @@ header .headWrap:after {width:100vw;}
     0%  {opacity:0; transform:translateY(50px);}
     100% {opacity:1; transform:translateY(0);}
 }
-.mainVisul .titleArea .titleBox .title {margin:.5em 0 .25em; font-size:3rem;}
-.mainVisul .titleArea .titleBox .subTitle {margin-bottom:.384em; color:#555; font-size:1.8rem; font-weight:500;}
+.mainVisul .titleArea .titleBox .title {margin:1em 0 0.5em; font-size:2.2rem;}
+.mainVisul .titleArea .titleBox .subTitle {margin-bottom:.384em; color:#555; font-size:1.6rem; font-weight:600;}
 .mainVisul .titleArea .titleBox .tag {color:#555; font-size:1.4rem;}
 .mainVisul .rotateText {display:none;}
 .mainVisul .slideBtnArea {display:none;}
@@ -206,8 +205,7 @@ header .headWrap:after {width:100vw;}
 .collection .tabMenu .brandTab .brTabList .categoryTab .cateTabList a {height:60px; line-height:60px; font-size:1.6rem;}
 .collection .prodListWrap .prodList .cateImg {position:relative; float:none; width:100%;}
 
-/* swiper *//*
-.swiper-slide  {width: 80% !important} */
+/* swiper */
 .swiper-button-next {display:none!important;}
 
 .collection .prodListWrap .prodList .textArea {width:100%; height:auto; padding-left:.625em;}
@@ -215,13 +213,14 @@ header .headWrap:after {width:100vw;}
 .collection .prodListWrap .prodList .textArea .subTitle {font-size:2rem; margin:.666em 0;}
 .collection .prodListWrap .prodList .textArea .text {margin-bottom:3.333em; font-size:1.4rem;}
 .collection .prodListWrap .prodList .textArea .moreBtnBox {position:relative; width:100%; height:80px;}
-.collection .prodListWrap .prodList .textArea .moreBtn {position:absolute; bottom:0; right:0; width:90px; font-size:1.4rem;}
-/*     .collection .prodListWrap .prodList .textArea .sampleList figure {max-width:31%;  max-width:140px;} */
+.collection .prodListWrap .prodList .textArea .moreBtn {position:absolute; bottom:0; right:0; width:100px; font-size:1.4rem;}
 
 
 .news .newsContent .newsBig {width:100%; float:none; margin-bottom:1.25em;}
+.news .newsContent .newsBig .moreBtn {font-size:1.4rem; width:100px;}
 .news .newsContent .newsBig figure {max-width:100%; max-height:600px; overflow:hidden;}
 .news .newsContent .newsSmall {width:100%; float:none;}
+
 .sns .snsContent ul .snsList {flex-basis:47%; margin:1.5%;}
 footer .containor {padding:2.5em 0;}
 footer .containor div.logo {float:none; height:60px;}

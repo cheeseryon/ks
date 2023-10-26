@@ -206,13 +206,13 @@ h2.title{position:relative; height:70px; text-align:center; color:#111; font-siz
 
 /* small,big 뉴스의 내용 줄바꿈 처리 */
 .news .newsContent .newsTit{white-space:nowrap; overflow:hidden;}
-.news .newsContent .newsText{height:50px; margin:1.25em 0; color:#666; overflow:hidden; text-overflow:ellipsis; display:0; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+.news .newsContent .newsText{ margin:1.25em 0; color:#666; overflow:hidden; text-overflow:ellipsis;  display: -webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;}
 /* 뉴스의 날짜 폰트 크기 */
 .news .newsContent .newsDate{font-size:1.5rem;}
 
 /* COLLECTION ,NEWS 버튼 공용요소 */
-.moreBtn{position:relative; display:block; width:104px; padding-bottom:0.187em; border-bottom:2px solid #111; color:#111; text-align:right;}
-.moreBtn:before{position:absolute; top:4px; left:2px; content:''; display:inline-block; width:18px; height:18px; background:url(../img/moreArrow.png) no-repeat center/cover;}
+.moreBtn{position:relative; display:block; width:110px; padding-bottom:0.187em; border-bottom:2px solid #111; color:#111; text-align:right;}
+.moreBtn:before{position:absolute; top:2px; left:0px; content:''; display:inline-block; width:16px; height:16px; background:url(../img/moreArrow.png) no-repeat center/cover;}
 .moreBtn a{transition:all .3s;}
 .moreBtn:hover{border-bottom:2px solid #602a19;}
 .moreBtn:hover:before{background:url(../img/moreArrow_1.png) no-repeat center/cover;}
