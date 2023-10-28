@@ -287,36 +287,30 @@ let depth02All = document.querySelectorAll('.depth02')
 for(let i = 0; i < depth02Btn.length; i++) {
     depth02Btn[i].addEventListener('click', function(e) {
         e.preventDefault();
-        let target = e.target
-        let nonTarget = depth02Btn.filter(item => item !== target);
-            nonTarget.forEach(item => item.classList.remove('on'));
-            nonTarget.forEach(item => item.nextElementSibling.style.height = 0);
 
-        target.classList.contains('on') ? target.classList.remove('on') : target.classList.add('on')
+        this.classList.toggle('on')
+        depth02Btn.forEach((item) => {
+            if(item !== this) {
+                item.classList.remove('on');
+                item.nextElementSibling.style.height = 0;
+            }
+        })
         
         let depth02 = this.nextElementSibling
         let depth01 = this.parentElement.parentElement
 
-        if(target.classList.contains('on')) {
+        if(this.classList.contains('on')) {
             depth02.style.height = depth02.scrollHeight + "px"
-            depth01.style.height = depth01.clientHeight + depth02.scrollHeight + "px"
+            depth01.style.height = 230 + depth02.scrollHeight + "px"
         } else {
             depth01.style.height = depth01.scrollHeight - depth02.scrollHeight  + "px"
             depth02.style.height = 0
         }
-
-
-        
-
-        
-        
-        
     });
 }
 
 window.addEventListener('load', function() {
     resize()
-    clearInterval(slideInterval);
     interval();
     scrollFadeIn()
     collectionHeightCalc()
