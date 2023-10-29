@@ -41,7 +41,7 @@
     .mobileGnb .gnbList .depth01 {height:0; background:#f5f5f5; width:100%; transition:.7s;}
     .mobileGnb .gnbList .depth01 a {display:block; padding-left:2.5em; font-size:16px; line-height:46px; color:#555555;}
     .mobileGnb .gnbList .depth01 a.on {background:#eeebe4;}
-    .mobileGnb .gnbList .depth02 {height:0; overflow:hidden; transition: 0.5s}
+    .mobileGnb .gnbList .depth02 {height:0; overflow:hidden; transition: 0.7s}
     .mobileGnb .gnbList .depth02 li a {font-size:1.4rem; padding-left:4.285em; background:#e2e2e2;}
     /* //header */
     .mainVisul .rotateText {display:none;}
@@ -81,10 +81,10 @@
     .mobileGnb .gnbList a.on {background:#d9d7d1;}
     .mobileGnb .gnbList > a:after,.mobileGnb .gnbList .depth02Btn:after {position:absolute; top:50%; right:18px; transform:translateY(-50%); content:''; width:22px; height:22px; background:url(../img/mobile01.png) no-repeat center/cover; opacity:0.3;}
     .mobileGnb .gnbList > a.on:after,.mobileGnb .gnbList .depth02Btn.on:after {background:url(../img/mobile02.png) no-repeat center/cover;}
-    .mobileGnb .gnbList .depth01 {height:0; width:100%; transition:all .5s;}
+    .mobileGnb .gnbList .depth01 {height:0; width:100%; transition:all .7s;}
     .mobileGnb .gnbList .depth01 a {display:block; padding-left:2.5em; font-size:16px; line-height:46px; color:#555555;}
     .mobileGnb .gnbList .depth01 a.on {background:#eeebe4;}
-    .mobileGnb .gnbList .depth02 {height:0; overflow:hidden; transition: 0.5s}
+    .mobileGnb .gnbList .depth02 {height:0; overflow:hidden; transition: 0.7s}
     .mobileGnb .gnbList .depth02 li a {font-size:1.4rem; padding-left:4.285em; background:#e2e2e2;}
 
 
@@ -166,11 +166,11 @@
     .mobileGnb .gnbList a.on {background:#d9d7d1;}
     .mobileGnb .gnbList > a:after,.mobileGnb .gnbList .depth02Btn:after {position:absolute; top:50%; right:18px; transform:translateY(-50%); content:''; width:22px; height:22px; background:url(../img/mobile01.png) no-repeat center/cover; opacity:0.3;}
     .mobileGnb .gnbList.on > a:after,.mobileGnb .gnbList .depth02Btn.on:after {background:url(../img/mobile02.png) no-repeat center/cover;}
-    .mobileGnb .gnbList .depth01 {height:0; width:100%; transition:all .5s;}
+    .mobileGnb .gnbList .depth01 {height:0; width:100%; transition:all .7s;}
     .mobileGnb .gnbList.on .depth01 {max-height:360px; background:#f5f5f5; visibility:visible;}
     .mobileGnb .gnbList .depth01 a {display:block; padding-left:2.5em; font-size:1.4rem; line-height:44px; color:#555555;}
     .mobileGnb .gnbList .depth01 a.on {background:#eeebe4;}
-    .mobileGnb .gnbList .depth02 {height:0; overflow:hidden; transition: 0.5s}
+    .mobileGnb .gnbList .depth02 {height:0; overflow:hidden; transition: 0.7s}
     .mobileGnb .gnbList .depth02 li a {padding-left:4.285em; background:#e2e2e2; font-size:1.2rem; line-height:40px;}
 
 

@@ -34,8 +34,8 @@ badge.addEventListener('click' , function (){
     let slideImgArea = document.querySelector(".slideImgArea");
     let slideContainor = document.querySelector(".slideContainor");
     let slideList = document.querySelectorAll(".slideList");
-    let slidePrevBtn = document.querySelector(".slidePrevBtn");
-    let slideNextBtn = document.querySelector(".slideNextBtn");
+
+
     let curNumContainor = document.querySelector(".curNumContainor");
     let curNum = document.querySelectorAll(".curNum");
 
@@ -46,7 +46,8 @@ badge.addEventListener('click' , function (){
     let slideInterval;
     let currentIndex = 0;
 
-function resize () { // 브라우저의 넓이(window.inner)가 변할 때 슬라이드의 width,height값을 조정하기 위한 함수
+// 브라우저의 넓이(window.inner)가 변할 때 슬라이드의 width,height값을 조정하기 위한 함수
+function resize () { 
     if (window.matchMedia("(min-width:1240px)").matches) { /* 사진 비율 4:3 */
         sldieWidth = 1200;
         sldieHeight = 800;
@@ -91,11 +92,14 @@ function resize () { // 브라우저의 넓이(window.inner)가 변할 때 슬�
     }
 }
 
+/* 슬라이드 작동 함수 */
 function mainVisualSlide(num) {
     currentIndex = num;
     resize()
 }    
 
+/* 슬라이드 이전 버튼 */
+let slidePrevBtn = document.querySelector(".slidePrevBtn");
 slidePrevBtn.addEventListener('click' , function() {
     if(currentIndex > 0 ){                
         mainVisualSlide(currentIndex - 1);
@@ -106,6 +110,9 @@ slidePrevBtn.addEventListener('click' , function() {
     interval();
 });
 
+
+/* 슬라이드 다음 버튼 */
+let slideNextBtn = document.querySelector(".slideNextBtn");
 slideNextBtn.addEventListener('click' , function() {
     if(currentIndex < slideList.length - 1 ){
         mainVisualSlide(currentIndex + 1);
@@ -115,6 +122,7 @@ slideNextBtn.addEventListener('click' , function() {
     clearInterval(slideInterval);
     interval();
 });
+
 
 function interval() {
     slideInterval = setInterval(function() {
@@ -127,7 +135,7 @@ function interval() {
     },4800);
 }
 
-/* 메인비쥬얼 재생,일시정지 버튼 */
+/* 슬라이드 재생,일시정지 버튼 */
 let clickCount = 1;
 toggleBtn.addEventListener('click' , function(){
     if(clickCount % 2 == 1) {
@@ -191,6 +199,7 @@ for(let i = 0; i < brTit.length; i++) {
         slideHeightCalc()
     })
 }
+
 /* 작은 탭메뉴(5개짜리) */
 for(let i = 0; i < cateName.length; i++) {             
     cateName[i].addEventListener('click' , function(e){
@@ -268,8 +277,10 @@ for(let i = 0; i < depth01Btn.length; i++) {
         target.classList.contains('on') ? target.classList.remove('on') : target.classList.add('on')
         
         let nonTarget = depth01Btn.filter(item => item !== target);
-        nonTarget.forEach(item => item.classList.remove('on'));
-        nonTarget.forEach(item => item.nextElementSibling.style.height = 0);
+        nonTarget.forEach((item) => {
+            item.classList.remove('on'),
+            item.nextElementSibling.style.height = 0
+        });
 
         let depth01 = this.nextElementSibling
         if(target.classList.contains('on')) { 
@@ -287,24 +298,22 @@ let depth02All = document.querySelectorAll('.depth02')
 for(let i = 0; i < depth02Btn.length; i++) {
     depth02Btn[i].addEventListener('click', function(e) {
         e.preventDefault();
-
-        this.classList.toggle('on')
-        depth02Btn.forEach((item) => {
-            if(item !== this) {
-                item.classList.remove('on');
-                item.nextElementSibling.style.height = 0;
-            }
-        })
-        
-        let depth02 = this.nextElementSibling
+        let nonTarget = depth02Btn.filter(item => e.target !== item)
         let depth01 = this.parentElement.parentElement
-
+        let depth02 = this.nextElementSibling
+        
         if(this.classList.contains('on')) {
-            depth02.style.height = depth02.scrollHeight + "px"
-            depth01.style.height = 230 + depth02.scrollHeight + "px"
+            depth01.style.height = depth01.clientHeight - depth02.scrollHeight + 'px'
+            depth02.style.height = 0;
+
+            this.classList.remove('on')
         } else {
-            depth01.style.height = depth01.scrollHeight - depth02.scrollHeight  + "px"
-            depth02.style.height = 0
+            nonTarget[0].classList.remove('on')
+            this.classList.add('on')
+
+            depth02.style.height = depth02.scrollHeight + "px"
+            depth01.style.height = depth01.clientHeight - nonTarget[0].nextElementSibling.clientHeight + depth02.scrollHeight + "px"
+            nonTarget[0].nextElementSibling.style.height = 0
         }
     });
 }
