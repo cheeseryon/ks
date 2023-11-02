@@ -34,8 +34,7 @@ badge.addEventListener('click' , function (){
     let slideImgArea = document.querySelector(".slideImgArea");
     let slideContainor = document.querySelector(".slideContainor");
     let slideList = document.querySelectorAll(".slideList");
-
-
+    
     let curNumContainor = document.querySelector(".curNumContainor");
     let curNum = document.querySelectorAll(".curNum");
 
