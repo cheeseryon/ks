@@ -89,7 +89,7 @@ header .util .searchBtn{width:22px; height:22px; background:url(../img/search.pn
 @keyframes fadeIn{0%{opacity:0; transform:translateY(100px);}
 100%{opacity:1; transform:translateY(0);}
 }
-.mainVisul .titleArea .titleBox .title{margin-bottom:.285em; color:#111; font-size:7rem; font-weight:700;}
+.mainVisul .titleArea .titleBox .title{margin-bottom:.285em; color:#111; font-size:7rem; font-weight:900;}
 .mainVisul .titleArea .titleBox .subTitle{margin-bottom:.666em; color:#555; font-size:2.8rem;}
 .mainVisul .titleArea .titleBox .tag{color:#555;}
 .mainVisul .slideWrap{display:flex; justify-content:end; width:100%; height:auto;}

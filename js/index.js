@@ -186,7 +186,7 @@ for(let i = 0; i < brTit.length; i++) {
             prodList[j].classList.remove('on');           
         } 
         let caTitOn = e.target.nextElementSibling.firstElementChild.firstElementChild
-        let dataIdx = caTitOn.getAttribute('data')
+        let dataIdx = caTitOn.getAttribute('data-idx')
         caTitOn.classList.add('on')
         prodList[dataIdx].classList.add('on')
 

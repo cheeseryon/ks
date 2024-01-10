@@ -2,22 +2,23 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="벽지디자인 전문업체, 포인트벽지, 인테리어상담, 벽지소요량, 지역대리점 안내,KS벽지.">
     <meta name="keyword" content="벽지디자인, 포인트벽지, 인테리어, 벽지, KS벽지">
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow" >
     <title>KS 벽지</title>
 
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="js/index.js" defer></script>
-    <script src="js/swiper.js" defer></script>
+    <script defer src="js/index.js"></script>
+    <script src="js/freeFix.min.js"></script>
+    <script defer src="js/swiper.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -97,7 +98,7 @@
         </header>
         <!-- //header -->
         
-        <a class="fullDownBtn mobileOn"><span class="blind">모바일 전체메뉴버튼</span></a>
+        <span><a class="fullDownBtn mobileOn"></a></span>
         <div class="mobileGnbArea">
             <div class="mobileGnbBg"></div>
             <ul class="mobileGnb">
@@ -191,7 +192,7 @@
 
                             <ul class="titleBox">
                                 <li class="tilteItem fadeInTitle">
-                                    <h1 class="title">이룸</h1>
+                                    <h3 class="title">이룸</h3>
                                     <p class="subTitle">나만의 공간을 이루다</p>
                                     <p class="tag">
                                         <span>#프리미엄</span>
@@ -201,7 +202,7 @@
                                     </p>
                                 </li>
                                 <li class="tilteItem">
-                                    <h1 class="title">더뷰</h1>
+                                    <h3 class="title">더뷰</h3>
                                     <p class="subTitle">벽지, 그 이상의<br>공간을 보여주다</p>
                                     <p class="tag">
                                         <span>#프리미엄</span>
@@ -211,8 +212,8 @@
                                     </p>
                                 </li>
                                 <li class="tilteItem">
-                                    <h1 class="title">벨루체</h1>
-                                    <p class="subTitle">당신이 꿈꾸는</br>라이프스타일이 담긴 공간</p>
+                                    <h3 class="title">벨루체</h3>
+                                    <p class="subTitle">당신이 꿈꾸는<br>라이프스타일이 담긴 공간</p>
                                     <p class="tag">
                                         <span>#친환경</span>
                                         <span>#합지벽지</span>
@@ -221,7 +222,7 @@
                                     </p>
                                 </li>
                                 <li class="tilteItem">
-                                    <h1 class="title">더홈</h1>
+                                    <h3 class="title">더홈</h3>
                                     <p class="subTitle">우리집에 꼭 맞는 스타일링</p>
                                     <p class="tag">
                                         <span>#소폭합지</span>
@@ -281,24 +282,24 @@
                             <li class="brTabList silkBr">
                                 <a href="javascript:;" class="brTit on">실크 브랜드</a>
                                 <ul class="categoryTab">
-                                    <li class="cateTabList"><a href="javascript:;" class="cateName on" data="0">더뷰 The View</a></li>
-                                    <li class="cateTabList"><a href="javascript:;" class="cateName" data="1">이룸 ERoom</a></li>
-                                    <li class="cateTabList"><a href="javascript:;" class="cateName" data="2">방염</a>
+                                    <li class="cateTabList"><a href="javascript:;" class="cateName on" data-idx="0">더뷰 The View</a></li>
+                                    <li class="cateTabList"><a href="javascript:;" class="cateName" data-idx="1">이룸 ERoom</a></li>
+                                    <li class="cateTabList"><a href="javascript:;" class="cateName" data-idx="2">방염</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="brTabList iamiBg">
                                 <a href="javascript:;" class="brTit">합지 브랜드</a>
                                 <ul class="categoryTab">
-                                    <li class="cateTabList"><a href="javascript:;" class="cateName" data="3">벨루체 VELUCE</a></li>
-                                    <li class="cateTabList"><a href="javascript:;" class="cateName" data="4">더홈 The Home</a></li>
+                                    <li class="cateTabList"><a href="javascript:;" class="cateName" data-idx="3">벨루체 VELUCE</a></li>
+                                    <li class="cateTabList"><a href="javascript:;" class="cateName" data-idx="4">더홈 The Home</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="prodListWrap fadeInClass">        
-                        <li class="prodList prod01 clear on" data="0">
+                    <ul class="prodListWrap fadeInClass">        
+                        <li class="prodList prod01 clear on" data-idx="0">
                             <div class="cateImg">
                                 <div class='btnPositionBox'>
                                     <div class="swiper mySwiper01"> <!--  cateImg -->
@@ -346,7 +347,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="prodList prod02 clear" data="1">
+                        <li class="prodList prod02 clear" data-idx="1">
                             <div class="cateImg">
                                 <div class='btnPositionBox'>
                                     <div class="swiper mySwiper02"> <!--  cateImg -->
@@ -364,11 +365,11 @@
                             <div class="textArea">
                                 <h3>이룸 E Room</h3>
                                 <p class="subTitle">"나만의 공간을 이루다"</p>
-                                <p class="text">이룸은 다양한 소재감과 세련된 컬러를 활용해</br>
-                                    풍성한 디자인과 고급스러운 컬러의 프리미엄 실크 벽지 컬렉션입니다. </br>
-                                    </br>
-                                    이룸으로 탄생하는 고급스러운 무드.</br>
-                                    프리미엄 벽지의 우아한 멋스러움으로</br>
+                                <p class="text">이룸은 다양한 소재감과 세련된 컬러를 활용해<br>
+                                    풍성한 디자인과 고급스러운 컬러의 프리미엄 실크 벽지 컬렉션입니다. <br>
+                                    <br>
+                                    이룸으로 탄생하는 고급스러운 무드.<br>
+                                    프리미엄 벽지의 우아한 멋스러움으로<br>
                                     한결 더 특별해진 당신만의 공간을 이뤄 나가세요.
                                 </p>
                                 <div class="sampleList clear clear">
@@ -392,7 +393,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="prodList prod03 clear" data="2">
+                        <li class="prodList prod03 clear" data-idx="2">
                             <div class="cateImg">
                                 <div class='btnPositionBox'>
                                     <div class="swiper mySwiper03"> <!--  cateImg -->
@@ -411,12 +412,12 @@
                             <div class="textArea">
                                 <h3>방염</h3>
                                 <p class="subTitle">"안전을 가장 먼저 생각한 친환경 방염벽지"</p>
-                                <p class="text">방염 벽지는 뛰어난 안정성은 물론, 친환경 품질인증으로 건강까지 세심하게</br>
-                                    배려한 실크 벽지 컬렉션입니다.</br>
-                                    </br>
-                                    국가 안전기준 제품으로 인증된 친환경 방염 벽지.</br>
-                                    기능을 겸비한 트랜디한 컬러의 제품으로</br>
-                                    당신에게 안전하고 아름다운 공간을 선사합니다.</br>
+                                <p class="text">방염 벽지는 뛰어난 안정성은 물론, 친환경 품질인증으로 건강까지 세심하게<br>
+                                    배려한 실크 벽지 컬렉션입니다.<br>
+                                    <br>
+                                    국가 안전기준 제품으로 인증된 친환경 방염 벽지.<br>
+                                    기능을 겸비한 트랜디한 컬러의 제품으로<br>
+                                    당신에게 안전하고 아름다운 공간을 선사합니다.<br>
                                 </p>
                                 <div class="sampleList clear clear">
                                     <figure>
@@ -439,7 +440,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="prodList prod04 clear" data="3">
+                        <li class="prodList prod04 clear" data-idx="3">
                             <div class="cateImg">
                                 <div class='btnPositionBox'>
                                     <div class="swiper mySwiper04"> <!--  cateImg -->
@@ -457,11 +458,11 @@
                             <div class="textArea">
                                 <h3>벨루체 VELUCE</h3>
                                 <p class="subTitle">"나만의 라이프 스타일이 담긴 공간"</p>
-                                <p class="text">벨루체는 깔끔한 컬러와 모던한 디자인, 풍부한 텍스쳐감까지 </br>
-                                    겸비한 친환경 합지벽지 컬렉션입니다.</br>
-                                    </br>
-                                    벨루체가 제안하는 합리적인 라이프스타일.</br>
-                                    편안한 내추럴부터 세련된 모던함까지</br>
+                                <p class="text">벨루체는 깔끔한 컬러와 모던한 디자인, 풍부한 텍스쳐감까지 <br>
+                                    겸비한 친환경 합지벽지 컬렉션입니다.<br>
+                                    <br>
+                                    벨루체가 제안하는 합리적인 라이프스타일.<br>
+                                    편안한 내추럴부터 세련된 모던함까지<br>
                                     벨루체만의 은은하고 따뜻한 감성을 느껴보세요.
                                 </p>
                                 <div class="sampleList clear clear">
@@ -485,7 +486,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="prodList prod05 clear" data="4">
+                        <li class="prodList prod05 clear" data-idx="4">
                             <div class="cateImg">
                                 <div class='btnPositionBox'>
                                     <div class="swiper mySwiper05"> <!--  cateImg -->
@@ -502,11 +503,11 @@
                             <div class="textArea">
                                 <h3>더홈 The Home</h3>
                                 <p class="subTitle blind">공란</p>
-                                <p class="text">더홈은 어떠한 공간이던 화사하게 밝혀주는 컬러와</br>
-                                    디자인의 소폭 합지벽지 컬렉션입니다.</br>
-                                    </br>
-                                    더홈과 함께 완성하는 나만의 인테리어.</br>
-                                    생기를 불어넣는 산뜻한 디자인으로</br>
+                                <p class="text">더홈은 어떠한 공간이던 화사하게 밝혀주는 컬러와<br>
+                                    디자인의 소폭 합지벽지 컬렉션입니다.<br>
+                                    <br>
+                                    더홈과 함께 완성하는 나만의 인테리어.<br>
+                                    생기를 불어넣는 산뜻한 디자인으로<br>
                                     당신의 일상이 더욱 특별해지는 공간을 만들어보세요.
                                 </p>
                                 <div class="sampleList clear clear">
@@ -530,9 +531,10 @@
                                 </div>
                             </div>
                         </li>                       
-                    </div>
+                    </ul>
                 </div>
             </div>
+            
         </section>
 
         <section class="news">
@@ -606,7 +608,7 @@
             </div>
         </section>
 
-        <sention class="sns">
+        <section class="sns">
             <div class="inner">
                 <div class="containor">
                     <div class="titleArea fadeInClass">
@@ -692,7 +694,7 @@
                     </div>
                 </div>
             </div>
-        </sention>
+        </section>
 
         <footer>
             <div class="inner">
@@ -727,9 +729,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </footer>
     </div>
-    </div> 
 </body>
 
 </html>
