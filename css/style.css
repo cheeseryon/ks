@@ -158,9 +158,9 @@ h2.title{position:relative; height:70px; text-align:center; color:#111; font-siz
 .swiper-button-next:before{content:''; position:absolute; top:45%; left:50%; transform:translate(-50%,-50%); display:block; width:30px; height:26px; background:url(../img/whiteArrow.png) no-repeat center/contain;}
 .swiper-button-next:after{
     content:''!important;
-    font-family:none!important;
-    font-size:none!important;
-    text-transform:none!important;
+    font-family:unset!important;
+    font-size:unset!important;
+    text-transform:unset!important;
     letter-spacing:0; font-variant:initial; line-height:1;
 }
 /* collection swiper END*/
@@ -201,7 +201,7 @@ h2.title{position:relative; height:70px; text-align:center; color:#111; font-siz
 .news .newsContent .newsSmall .newsList li a{display:block; margin:.625em 0;}
 .news .newsContent .newsSmall .newsList li a .smNeLiWrap{display:flex;}
 .news .newsContent .newsSmall .newsList li a .smNeLiWrap figure img{width:auto; max-width:162px; height:100%;}
-.news .newsContent .newsSmall .newsList li a .smNeLiWrap div{flex-basis:80%; padding:.625em 1.25em;}
+.news .newsContent .newsSmall .newsList li a .smNeLiWrap div{padding:.625em 1.25em;}
 .news .newsContent .newsSmall .newsList li div .newsTit{color:#111; font-size:2rem;}
 .news .newsContent .moreBtn{position:absolute; top:20px; right:0;}
 
