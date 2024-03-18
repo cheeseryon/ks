@@ -200,7 +200,7 @@ h2.title{position:relative; height:70px; text-align:center; color:#111; font-siz
 .news .newsContent .newsSmall{width:50%; float:left; padding:1.25em 0}
 .news .newsContent .newsSmall .newsList li a{display:block; margin:.625em 0;}
 .news .newsContent .newsSmall .newsList li a .smNeLiWrap{display:flex;}
-.news .newsContent .newsSmall .newsList li a .smNeLiWrap figure img{width:auto; max-width:162px; height:100%;}
+.news .newsContent .newsSmall .newsList li a .smNeLiWrap figure img{width:100%; max-width:162px;}
 .news .newsContent .newsSmall .newsList li a .smNeLiWrap div{padding:.625em 1.25em;}
 .news .newsContent .newsSmall .newsList li div .newsTit{color:#111; font-size:2rem;}
 .news .newsContent .moreBtn{position:absolute; top:20px; right:0;}
