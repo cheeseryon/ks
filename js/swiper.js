@@ -83,6 +83,5 @@ var swiper05 = new Swiper(".mySwiper05", {
   },
   });
 
-let swiperSlide = document.querySelectorAll('.swiper-slide')
 let swiperwrapper = document.querySelector('.swiper-wrapper')
 

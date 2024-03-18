@@ -107,8 +107,8 @@
     .collection .prodListWrap .prodList .cateImg {position:relative; float:none; width:100%; height:100%;}
 
     /* swiper */
-    .swiper-slide  {width: 100vw !important}
-    .swiper-button-next {display:none!important;}
+
+    .swiper-button-next {display:none !important;}
 
     .collection .prodListWrap .prodList .textArea {width:100%; height:auto; padding-left:.625em; overflow:visible; height:100%;}
     .collection .prodListWrap .prodList .textArea h3 {font-size:3.75rem; margin-top:1.066em;}
